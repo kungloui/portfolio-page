@@ -1,21 +1,29 @@
 #home {
   width: 100%;
   z-index: 1;
-  background:url("pictures/porträtt.jpg") 50% / cover;
   display: flex;
+  background-color: #333;
+}
+
+.home__background {
+  background:url("../pictures/portrait.jpg") 50% / cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width:100%;
+  max-width: 140vh;
+  margin: auto;
+  height: 100%;
+  position: relative;
 }
 
 .landing-headings {
-  width: 62%;
-  top: 75%;
-  right: 0;
-  left: 54%;
-  position: relative;
+  position: absolute;
   margin-top: 1.000em;
   opacity: 1;
+  right: 0%;
+  bottom: 0%;
+  padding: 40px;
 }
 
 .landing-headings--name {

@@ -18,11 +18,9 @@ p {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   order: 1;
-  padding-right: 5em;
   box-sizing: border-box;
-  
 }
 
 section {
@@ -43,8 +41,4 @@ $media-query-size-small: 900px;
 
 /*media query*/
 @media screen and (max-width: $media-query-size-medium) {
-  .container {
-    width: 100%;
-    padding-right: 0;
-  }
 }
