@@ -1,0 +1,133 @@
+#sidebar {
+    width: 15em;
+    position: fixed;
+    display: flex;
+    z-index: 2;
+    right: 0;
+    top: 50%;
+    padding-right: 2.2em;
+    transform: translateY(-50%);
+
+}
+
+nav {
+    width: 20%;
+}
+nav.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    margin-top:12px;
+}
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+nav li {
+
+}
+nav li a {
+    color:rgb(50,50,50);
+    font-weight:400;
+    text-decoration: none;
+    line-height: 2em;
+    padding: 9px 24px;
+    margin: 5px;
+    font-size: 1.5rem;
+}
+a.nav-active {
+    color:#ccc;
+}
+
+li{
+  list-style: none;
+  color: black;
+  width: 8%;
+  white-space: nowrap;
+}
+i{
+  color: black;
+  }
+ul.footer__link-icons{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.toggle-nav {
+  display: none;
+}
+
+@media screen and (max-width: $media-query-size-medium) {
+  .menu {
+    width: auto;
+  }
+  .menu a {
+    color: #F6F5F5;
+  }
+  #sidebar {
+    top: 10%;
+  }
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu ul {
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    right: 0px;
+    padding:10px 18px;
+    box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+    border-radius:3px;
+    background:#303030;
+
+    &:after {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      top: 0%;
+      right: 22px;
+      content:'';
+      transform:translate(0%, -100%);
+      border-left:7px solid transparent;
+      border-right:7px solid transparent;
+      border-bottom:7px solid #303030;
+    }
+
+    &.active {
+      display: none;
+    }
+  }
+
+  .menu li {
+      margin:5px 0px 5px 0px;
+      float:none;
+      display:block;
+  }
+
+  .menu a {
+      display:block;
+  }
+
+  .toggle-nav {
+      padding:20px;
+      float:left;
+      display:inline-block;
+      box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+      border-radius:3px;
+      background:#666666;
+      text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+      color:#777;
+      font-size:20px;
+      transition:color linear 0.15s;
+  }
+
+  .toggle-nav:hover, .toggle-nav.active {
+      text-decoration:none;
+      color:#66a992;
+  }
+}

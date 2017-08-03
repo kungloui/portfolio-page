@@ -1,0 +1,75 @@
+$base-color: #489EA3;
+
+#contact {
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  background-color: darken( $base-color, 10%);
+}
+/*.contact_container{
+  width: 15%;
+  height:800px;
+  background: white;
+}*/
+.contact__content-container {
+  position: relative;
+  top: 25%;
+  padding-right: 2.2em;
+}
+
+.contact__col {
+  background-color: #becfd6;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background:url("pictures/kontakt-porträtt.jpg") 50% / cover
+}
+.contact__text {
+  position: absolute;
+  top: 73%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  padding-bottom: 2.3em;
+  text-align: center;
+}
+$base-color: #489EA3;
+
+.button {
+  text-transform: uppercase;
+  border: 1px solid $base-color;
+  letter-spacing: 0.23rem;
+  color: $base-color;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  &:hover {
+    color: lighten( $base-color, 10% );
+    border-color: lighten( $base-color, 10% );
+  }
+}
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: $media-query-size-medium) {
+  .contact__col {
+    width: 70vw;
+    height: 70vw;
+  }
+  .button {
+    padding: 0.4em 1.8em 0.35em;
+  }
+}
+
+@media screen and (max-width: $media-query-size-small) {
+  .contact__col {
+    width: 90vw;
+    height: 90vw;
+  }
+  .contact__text {
+    top: 60%;
+  }
+}

@@ -1,0 +1,50 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.container {
+  width: 80%;
+  order: 1;
+  padding-right: 5em;
+  box-sizing: border-box;
+  
+}
+
+section {
+  height: 100vh;
+  position: relative;
+}
+
+.footer {
+  height: 10vh;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+$media-query-size-medium: 1200px;
+$media-query-size-small: 900px;
+
+/*media query*/
+@media screen and (max-width: $media-query-size-medium) {
+  .container {
+    width: 100%;
+    padding-right: 0;
+  }
+}

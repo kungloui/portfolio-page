@@ -1,0 +1,39 @@
+#home {
+  width: 100%;
+  z-index: 1;
+  background:url("pictures/porträtt.jpg") 50% / cover;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.landing-headings {
+  width: 62%;
+  top: 75%;
+  right: 0;
+  left: 54%;
+  position: relative;
+  margin-top: 1.000em;
+  opacity: 1;
+}
+
+.landing-headings--name {
+  color: #2BC5CC;
+}
+
+.landing-span {
+  font-size: 1.9rem;
+  color: #19767a;
+  font-weight: 800;
+  //text-shadow: -2px -2px 0px rgba(129, 129, 129, 1);
+}
+
+@media screen and (max-width: $media-query-size-medium) {
+  .landing-headings{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

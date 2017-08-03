@@ -1,0 +1,347 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0; }
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+p {
+  line-height: 1.5; }
+
+.container {
+  width: 80%;
+  order: 1;
+  padding-right: 5em;
+  box-sizing: border-box; }
+
+section {
+  height: 100vh;
+  position: relative; }
+
+.footer {
+  height: 10vh;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  flex-flow: row; }
+
+/*media query*/
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding-right: 0; } }
+#home {
+  width: 100%;
+  z-index: 1;
+  background: url("pictures/portr├ñtt.jpg") 50%/cover;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.landing-headings {
+  width: 62%;
+  top: 75%;
+  right: 0;
+  left: 54%;
+  position: relative;
+  margin-top: 1.000em;
+  opacity: 1; }
+
+.landing-headings--name {
+  color: #2BC5CC; }
+
+.landing-span {
+  font-size: 1.9rem;
+  color: #19767a;
+  font-weight: 800; }
+
+@media screen and (max-width: 1200px) {
+  .landing-headings {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; } }
+.about {
+  width: 94%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0; }
+
+.about__row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 370px;
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  transform-origin: top; }
+
+.about__row--expanded {
+  opacity: 1;
+  transform: scale(1); }
+
+.about__image-container {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  float: left;
+  min-height: 325px; }
+
+.about__image {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.about__content-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
+  float: left;
+  padding: 1em; }
+
+.about__title {
+  margin-top: 0; }
+
+@media screen and (max-width: 1200px) {
+  .about__row {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto; }
+
+  .about__row--reverse {
+    flex-direction: column-reverse; } }
+@media screen and (max-width: 900px) {
+  .about__row {
+    width: 100%; }
+
+  .about {
+    width: 100%; } }
+#contact {
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  background-color: #387c80; }
+
+/*.contact_container{
+  width: 15%;
+  height:800px;
+  background: white;
+}*/
+.contact__content-container {
+  position: relative;
+  top: 25%;
+  padding-right: 2.2em; }
+
+.contact__col {
+  background-color: #becfd6;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: url("pictures/kontakt-portr├ñtt.jpg") 50%/cover; }
+
+.contact__text {
+  position: absolute;
+  top: 73%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  padding-bottom: 2.3em;
+  text-align: center; }
+
+.button {
+  text-transform: uppercase;
+  border: 1px solid #489EA3;
+  letter-spacing: 0.23rem;
+  color: #489EA3;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700; }
+  .button:hover {
+    color: #64b6ba;
+    border-color: #64b6ba; }
+
+a {
+  text-decoration: none; }
+
+@media screen and (max-width: 1200px) {
+  .contact__col {
+    width: 70vw;
+    height: 70vw; }
+
+  .button {
+    padding: 0.4em 1.8em 0.35em; } }
+@media screen and (max-width: 900px) {
+  .contact__col {
+    width: 90vw;
+    height: 90vw; }
+
+  .contact__text {
+    top: 60%; } }
+#sidebar {
+  width: 15em;
+  position: fixed;
+  display: flex;
+  z-index: 2;
+  right: 0;
+  top: 50%;
+  padding-right: 2.2em;
+  transform: translateY(-50%); }
+
+nav {
+  width: 20%; }
+
+nav.stick {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  margin-top: 12px; }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+nav li a {
+  color: #323232;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 2em;
+  padding: 9px 24px;
+  margin: 5px;
+  font-size: 1.5rem; }
+
+a.nav-active {
+  color: #ccc; }
+
+li {
+  list-style: none;
+  color: black;
+  width: 8%;
+  white-space: nowrap; }
+
+i {
+  color: black; }
+
+ul.footer__link-icons {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center; }
+
+.toggle-nav {
+  display: none; }
+
+@media screen and (max-width: 1200px) {
+  .menu {
+    width: auto; }
+
+  .menu a {
+    color: #F6F5F5; }
+
+  #sidebar {
+    top: 10%; }
+
+  .menu {
+    position: relative;
+    display: inline-block; }
+
+  .menu ul {
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    right: 0px;
+    padding: 10px 18px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background: #303030; }
+    .menu ul:after {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      top: 0%;
+      right: 22px;
+      content: '';
+      transform: translate(0%, -100%);
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #303030; }
+    .menu ul.active {
+      display: none; }
+
+  .menu li {
+    margin: 5px 0px 5px 0px;
+    float: none;
+    display: block; }
+
+  .menu a {
+    display: block; }
+
+  .toggle-nav {
+    padding: 20px;
+    float: left;
+    display: inline-block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background: #666666;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    color: #777;
+    font-size: 20px;
+    transition: color linear 0.15s; }
+
+  .toggle-nav:hover, .toggle-nav.active {
+    text-decoration: none;
+    color: #66a992; } }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Black.ttf");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+body {
+  font-family: 'Montserrat'; }
+
+h1, h2, h3 {
+  font-family: 'Roboto';
+  font-weight: 900; }
+
+h1 {
+  font-size: 6rem;
+  letter-spacing: 0.04em; }
+
+h2 {
+  font-size: 2rem;
+  color: #26B1B7; }
+
+h3 {
+  font-size: 1.25rem; }
+
+p {
+  font-size: 1.3rem; }
+
+/*# sourceMappingURL=main.css.map */
