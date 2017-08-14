@@ -1,0 +1,8 @@
+Hej! Mitt namn är Lovisa Spångberg</h2>
+        Jag är 22 år gammal och bor på Södermalm i Stockholm. Jag är en junior frontend utvecklare med stort intresse för webben. Det som fick mig att fastna för programmering var att jag tycker det är så roligt med problemlösande och skapande.
+Programmering</h2>       
+ Jag har nyligen läst klart ett ettårigt program inom IT på Högskolan Väst som heter Webbutvecklare. Under utbildningen har jag fått lära mig grunderna inom olika programmeringsspråk så som  html, css, javascript. Jag har även kunskaper om hur man utvecklar webbsidor i PHP och ASP.NET. Mot slutet av utbildningen fick jag lära mig mer om hur en utvecklar mobila webbapplikationer och om CMS-verktyget Wordpress, vilket jag tyckte var lite extra roligt. Dessförinnan studerade jag en kurs i Java på Komvux. <br/>Jag har fått en grund att stå på och vill nu utvecklas vidare inom webbutveckling.
+
+Som person </h2>
+          <p class="about__text"> Jag tycker om att arbeta. Jag ger mig hän och är kreativ.  Jag tycker om att lära mig nya saker och känna att jag utvecklas som programmerare. Jag håller nu på att lära mig att programmera i ReactJS. Webbutveckling  och programmering är dels en hobby men även något jag skulle vilja arbeta med.
+          <br />När jag inte programmerar spenderar jag gärna tid med vänner, lagar god mat eller tar en springtur runt söder.</p>

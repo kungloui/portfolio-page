@@ -2,7 +2,6 @@ $base-color: #489EA3;
 
 #contact {
   display: flex;
-  z-index: 2;
   justify-content: center;
   background-color: darken( $base-color, 10%);
 }
@@ -15,27 +14,31 @@ $base-color: #489EA3;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 50px;
   max-width: 100vh;
   max-height: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .contact__col {
   background-color: #becfd6;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
   background:url("pictures/kontakt-porträtt.jpg") 50% / cover
 }
 .contact__text {
-  position: absolute;
-  top: 73%;
+  position: sticky;
+  top: 64%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  padding-bottom: 2.3em;
+  padding: 0.8rem 0;
   text-align: center;
 }
 $base-color: #489EA3;
@@ -46,6 +49,9 @@ $base-color: #489EA3;
   flex-direction: column;
   align-items: center;
 }
+a {
+  text-decoration: none;
+}
 .git {
   margin: 1rem;
   color: $base-color;
@@ -53,6 +59,31 @@ $base-color: #489EA3;
     color: lighten( $base-color, 10% );
   }
 }
+a.git{
+  position: relative;
+  font-size: 1.4rem;
+}
+a.git:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $base-color;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a.git:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 .button {
   text-transform: uppercase;
   border: 1px solid $base-color;
@@ -66,9 +97,11 @@ $base-color: #489EA3;
     border-color: lighten( $base-color, 10% );
   }
 }
-a {
-  text-decoration: none;
+
+.contact__text_small {
+  display: none;
 }
+
 @media screen and (max-width: $media-query-size-medium) {
   .contact__col {
     width: 70vw;
@@ -80,11 +113,22 @@ a {
 }
 
 @media screen and (max-width: $media-query-size-small) {
-  .contact__col {
-    width: 90vw;
-    height: 90vw;
+  #contact {
+    display: flex;
+    flex-direction: column;
   }
   .contact__text {
-    top: 60%;
+    display: none;
+
+  }
+  .contact__text_small {
+    display: block;
+    text-align: center;
+    padding: 0 3em;
+  }
+  .button {
+    letter-spacing: 0;
+    padding: 0;
+    font-size: 1rem;
   }
 }

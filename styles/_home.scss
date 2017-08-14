@@ -43,5 +43,13 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    right: initial;
   }
+}
+
+@media screen and (max-width: $media-query-size-small) {
+  .landing-headings{
+    box-sizing: border-box;
+  }
+
 }

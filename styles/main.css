@@ -70,14 +70,17 @@ section {
     width: 50%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    right: initial; } }
+@media screen and (max-width: 900px) {
+  .landing-headings {
+    box-sizing: border-box; } }
 .about {
   height: auto;
   position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 5em 20em; }
+  padding: 5em 20em 0; }
 
 .about__row {
   display: flex;
@@ -85,16 +88,16 @@ section {
   align-items: stretch;
   width: 100%;
   min-height: 370px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
-  transform: scale(0);
+  transform: translate3d(0, -20%, 0);
   transition: all 0.5s ease;
   transform-origin: top; }
 
 .about__row--expanded {
   opacity: 1;
-  transform: scale(1); }
+  transform: translate3d(0, 0, 0); }
 
 .about__image-container {
   display: flex;
@@ -120,6 +123,9 @@ section {
   margin-top: 0; }
 
 @media screen and (max-width: 1200px) {
+  .about {
+    padding: 5em 10em 0; }
+
   .about__row {
     flex-direction: column;
     width: 80%;
@@ -128,14 +134,15 @@ section {
   .about__row--reverse {
     flex-direction: column-reverse; } }
 @media screen and (max-width: 900px) {
-  .about__row {
-    width: 100%; }
-
   .about {
-    width: 100%; } }
+    padding: 5em 0 0; }
+
+  .about__row {
+    width: 90%;
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 #contact {
   display: flex;
-  z-index: 2;
   justify-content: center;
   background-color: #387c80; }
 
@@ -148,26 +155,30 @@ section {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 50px;
   max-width: 100vh;
-  max-height: 100vw; }
+  max-height: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
 
 .contact__col {
   background-color: #becfd6;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
   background: url("pictures/kontakt-portr├ñtt.jpg") 50%/cover; }
 
 .contact__text {
-  position: absolute;
-  top: 73%;
+  position: sticky;
+  top: 64%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  padding-bottom: 2.3em;
+  padding: 0.8rem 0;
   text-align: center; }
 
 .link-icons {
@@ -176,11 +187,37 @@ section {
   flex-direction: column;
   align-items: center; }
 
+a {
+  text-decoration: none; }
+
 .git {
   margin: 1rem;
   color: #489EA3; }
   .git:hover {
     color: #64b6ba; }
+
+a.git {
+  position: relative;
+  font-size: 1.4rem; }
+
+a.git:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #489EA3;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+a.git:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
 
 .button {
   text-transform: uppercase;
@@ -194,8 +231,8 @@ section {
     color: #64b6ba;
     border-color: #64b6ba; }
 
-a {
-  text-decoration: none; }
+.contact__text_small {
+  display: none; }
 
 @media screen and (max-width: 1200px) {
   .contact__col {
@@ -205,14 +242,24 @@ a {
   .button {
     padding: 0.4em 1.8em 0.35em; } }
 @media screen and (max-width: 900px) {
-  .contact__col {
-    width: 90vw;
-    height: 90vw; }
+  #contact {
+    display: flex;
+    flex-direction: column; }
 
   .contact__text {
-    top: 60%; } }
+    display: none; }
+
+  .contact__text_small {
+    display: block;
+    text-align: center;
+    padding: 0 3em; }
+
+  .button {
+    letter-spacing: 0;
+    padding: 0;
+    font-size: 1rem; } }
 #sidebar {
-  width: 15em;
+  width: 13em;
   position: fixed;
   display: flex;
   z-index: 2;
@@ -236,13 +283,16 @@ nav ul {
   padding: 0; }
 
 nav li a {
-  color: #323232;
+  color: #166A6D;
   font-weight: 400;
   text-decoration: none;
   line-height: 2em;
   padding: 9px 24px;
   margin: 5px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  transition: all 0.2s ease; }
+  nav li a.dark {
+    color: #333333; }
 
 a.nav-active {
   color: #ccc; }
@@ -273,7 +323,13 @@ ul.footer__link-icons {
     color: #F6F5F5; }
 
   #sidebar {
-    top: 10%; }
+    top: 0%;
+    width: auto;
+    z-index: 2;
+    right: 0;
+    padding-right: 0em;
+    margin: 1em;
+    transform: none; }
 
   .menu {
     position: relative;
@@ -360,5 +416,9 @@ h3 {
 
 p {
   font-size: 1rem; }
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 3rem; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
 #sidebar {
-    width: 15em;
+    width: 13em;
     position: fixed;
     display: flex;
     z-index: 2;
@@ -28,14 +28,19 @@ nav li {
 
 }
 nav li a {
-    color:rgb(50,50,50);
+    color:#166A6D;
     font-weight:400;
     text-decoration: none;
     line-height: 2em;
     padding: 9px 24px;
     margin: 5px;
     font-size: 1rem;
+    transition: all 0.2s ease;
+    &.dark {
+      color: #333333;
+    }
 }
+
 a.nav-active {
     color:#ccc;
 }
@@ -68,7 +73,13 @@ ul.footer__link-icons{
     color: #F6F5F5;
   }
   #sidebar {
-    top: 10%;
+    top: 0%;
+    width: auto;
+    z-index: 2;
+    right: 0;
+    padding-right: 0em;
+    margin: 1em;
+    transform: none;
   }
   .menu {
     position: relative;

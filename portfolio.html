@@ -6,7 +6,7 @@
 <meta name="author" content="Lovisa Spångberg">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles/main.css">
-
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -24,43 +24,45 @@
       </nav>
   </div><!-- end #sidebar -->
   <div class="container">
-    <section id="home" class="top" style="background-image: url('pictures/Porträtt2.jpg');">
-      <div class="landing-headings">
-        <h1 class="landing-headings--name">
-          Lovisa Spångberg
-        </h1>
-        <span class="landing-span">Front end developer</span>
-      </div><!-- end .landing-headings-->
+    <section id="home" class="top">
+      <div class="home__background">
+        <div class="landing-headings">
+          <h1 class="landing-headings--name">
+            Lovisa
+              <br/>
+            Spångberg
+          </h1>
+          <span class="landing-span">Front end developer</span>
+        </div><!-- end .landing-headings-->
+      </div>
     </section><!-- end .home-->
     <section id="about" class="about">
       <div class="about__row">
         <div class="about__image-container">
-          <div class="about__image" style="background-image: url(images/strand.jpg)"></div>
+          <div class="about__image" style="background-image: url(images/hand-2.jpg)"></div>
         </div>
         <div class="about__content-container">
-          <h2 class="about__title">Hej! Mitt namn är Lovisa Spångberg</h2>
-          <p class="about__text"> Jag är 22 år gammal och bor på Södermalm i Stockholm. Jag är en junior frontend utvecklare med stort intresse för webben. Det som fick mig att fastna för programmering var problemlösandet och skapandet. </p>
+          <h2 class="about__title"> Kort om mig</h2>
+          <p class="about__text"> Jag är 22 år gammal och bor på Södermalm i Stockholm. Jag är en aspirerande fullstack utvecklare med stort intresse för webbutveckling och design. Det som fick mig att fastna för programmering var att jag tycker det är en perfekt kombination av problemlösning och kreativt skapande. Som person är jag arbetsam, kreativ och tycker om att testa nya saker.</p>
         </div>
       </div>
       <div class="about__row about__row--reverse">
         <div class="about__content-container">
           <h2 class="about__title">Programmering</h2>
           <p class="about__text">
-             Jag har nyligen läst klart ett ettårigt program inom IT på Högskolan Väst som heter Webbutvecklare. Under utbildningen har jag fått lära mig grunderna inom olika programmeringsspråk så som  html, css, javascript. Jag har även kunskaper om hur man utvecklar webbsidor i PHP och ASP.NET. Mot slutet av utbildningen fick jag lära mig mer om hur en utvecklar mobila webbapplikationer och om CMS-verktyget Wordpress, vilket jag tyckte var lite extra roligt. Dessförinnan studerade jag en kurs i Java på Komvux. Jag har fått en grund att stå på och vill nu utvecklas vidare inom webbutveckling.
-             </p>
+            Jag har nyligen läst klart ett ettårigt program, “Webbutvecklare”, på Högskolan Väst. Under utbildningen har jag fått en bred grund inom webbutveckling. I utbildningen ingick programmeringsspråk html, css, javascript, PHP och ASP.NET. Mot slutet av utbildningen fick jag även lära mig grunderna i att utveckla progressiva webbapplikationer och Wordpress. Innan utbildningen har jag dessutom gått en kurs inom Java och använt mig av Code Academy och liknande tjänster.</p>
         </div>
         <div class="about__image-container">
-          <div class="about__image" style="background-image: url(images/vattenfall.jpg)"></div>
+          <div class="about__image" style="background-image: url(images/books-2.jpg)"></div>
         </div>
       </div>
       <div class="about__row">
         <div class="about__image-container">
-          <div class="about__image" style="background-image: url(images/stad.jpg)"></div>
+          <div class="about__image" style="background-image: url(images/lion.jpg)"></div>
         </div>
         <div class="about__content-container">
-          <h2 class="about__title">Som person </h2>
-          <p class="about__text"> Som person är jag arbetsam, hängiven och kreativ.  Jag tycker om att lära mig nya saker och känna att jag utvecklas som programmerare. Programmering har blivit en hobby som jag pysslar med på fritiden och håller nu på att lära mig att programmera i ReactJS.
-          <br />När jag inte programmerar spenderar jag gärna tid med vänner, lagar god mat eller tar en springtur runt söder.</p>
+          <h2 class="about__title">Framtiden som webbutvecklare </h2>
+          <p class="about__text"> Just nu arbetar jag som truckförare, men har som dröm att få ett arbete inom webbutveckling. Nu efter utbildningen har jag fortsatt med mina egna studier på fritiden. Nu håller jag på att lära mig att React, och jag har även lärt mig att använda Git och Github, SASS och Gulp. Om du tror att jag att jag har möjlighet att få en praktikplats hos er, eller om du bara vill ta en fika så hör jättegärna av dig!</p>
         </div>
       </div>
     </section>
@@ -69,10 +71,25 @@
         <div class="contact__col"  style="background-image: url('pictures/kontakt-porträtt.jpg');">
           <div class="contact__text">
             <h2>Hör gärna av dig till mig!</h2>
-            <a href="mailto:lovisaspangberg@gmail.com" class="button">lovisaspangberg@gmail.com</a>
+            <div class="link-icons">
+              <a href="mailto:lovisaspangberg@gmail.com" class="button">lovisaspangberg@gmail.com</a>
+              <a class="git" href="https://github.com/kungloui/portfolio-page">
+                Github
+              </a>
+            </div>
           </div>
         </div>
 
+
+      </div>
+      <div class="contact__text_small">
+        <h2>Hör gärna av dig till mig!</h2>
+        <div class="link-icons">
+          <a href="mailto:lovisaspangberg@gmail.com" class="button">lovisaspangberg@gmail.com</a>
+          <a class="git" href="https://github.com/kungloui/portfolio-page">
+            Github
+          </a>
+        </div>
       </div>
     </section><!-- end .contact-->
 
